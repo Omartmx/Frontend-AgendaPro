@@ -1,54 +1,36 @@
-import { useState } from "react";
-import { useAuth } from "../hooks/useAuth";
-import { useNavigate } from "react-router-dom";
+export default function Dashboard(){
 
-export default function Login() {
+  return(
 
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+    <div className="page">
 
-  const { login } = useAuth();
-  const navigate = useNavigate();
+      <h1>Dashboard</h1>
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+      <div className="grid-cards">
 
-    login(email, password);
+        <div className="card">
+          <h3>120</h3>
+          <p>Usuarios</p>
+        </div>
 
-    navigate("/dashboard");
-  };
+        <div className="card">
+          <h3>15</h3>
+          <p>Especialistas</p>
+        </div>
 
-  return (
-    <div className="login-container">
+        <div className="card">
+          <h3>34</h3>
+          <p>Citas hoy</p>
+        </div>
 
-      <div className="login-card">
-
-        <h2>Iniciar Sesión</h2>
-
-        <form onSubmit={handleSubmit}>
-
-          <input
-            type="email"
-            placeholder="Correo"
-            value={email}
-            onChange={(e)=>setEmail(e.target.value)}
-            required
-          />
-
-          <input
-            type="password"
-            placeholder="Contraseña"
-            value={password}
-            onChange={(e)=>setPassword(e.target.value)}
-            required
-          />
-
-          <button className="btn-primary">Ingresar</button>
-
-        </form>
+        <div className="card">
+          <h3>8</h3>
+          <p>Horarios disponibles</p>
+        </div>
 
       </div>
 
     </div>
-  );
+
+  )
 }
