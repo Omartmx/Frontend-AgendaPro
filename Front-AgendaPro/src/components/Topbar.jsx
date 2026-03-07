@@ -1,23 +1,24 @@
-function Topbar() {
-  return (
-    <div style={styles.topbar}>
-      <h3>Sistema de Gestión de Citas</h3>
+import { useAuth } from "../hooks/useAuth";
 
-      <div>
-        <span>Usuario</span>
+function Topbar(){
+
+  const { user } = useAuth();
+
+  return(
+
+    <header className="topbar">
+
+      <h3>Panel de Control</h3>
+
+      <div className="user-info">
+
+        <span>{user?.name || "Usuario"}</span>
+
       </div>
-    </div>
+
+    </header>
+
   );
 }
-
-const styles = {
-  topbar: {
-    background: "#fff",
-    padding: "15px",
-    borderBottom: "1px solid #ddd",
-    display: "flex",
-    justifyContent: "space-between"
-  }
-};
 
 export default Topbar;

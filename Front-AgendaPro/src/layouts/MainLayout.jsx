@@ -2,33 +2,29 @@ import Sidebar from "../components/Sidebar";
 import Topbar from "../components/Topbar";
 
 function MainLayout({ children }) {
+
   return (
-    <div style={styles.container}>
+
+    <div className="app-layout">
+
       <Sidebar />
 
-      <div style={styles.main}>
+      <div className="main-content">
+
         <Topbar />
 
-        <div style={styles.content}>
-          {children}
-        </div>
-      </div>
-    </div>
-  );
-}
+        <div className="page-content">
 
-const styles = {
-  container: {
-    display: "flex"
-  },
-  main: {
-    flex: 1,
-    background: "#f3f4f6",
-    minHeight: "100vh"
-  },
-  content: {
-    padding: "30px"
-  }
-};
+          {children}
+
+        </div>
+
+      </div>
+
+    </div>
+
+  );
+
+}
 
 export default MainLayout;
