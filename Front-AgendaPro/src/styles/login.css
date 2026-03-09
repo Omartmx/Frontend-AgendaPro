@@ -1,0 +1,80 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+height:100vh;
+background:linear-gradient(135deg,#1f1f1f,#2c2c2c);
+}
+
+/* contenedor principal */
+.login-container{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+/* tarjeta login */
+.login-box{
+width:380px;
+padding:45px;
+background:#2b2b2b;
+border-radius:14px;
+box-shadow:0 15px 40px rgba(0,0,0,0.5);
+text-align:center;
+}
+
+/* titulo */
+.login-box h2{
+color:white;
+letter-spacing:3px;
+margin-bottom:30px;
+}
+
+/* grupo inputs */
+.input-group{
+display:flex;
+align-items:center;
+background:#3a3a3a;
+border-radius:8px;
+padding:12px;
+margin-bottom:20px;
+}
+
+/* iconos */
+.input-group svg{
+color:#aaa;
+margin-right:10px;
+}
+
+/* inputs */
+.input-group input{
+border:none;
+background:transparent;
+color:white;
+width:100%;
+outline:none;
+font-size:14px;
+}
+
+/* boton */
+.login-btn{
+width:100%;
+padding:14px;
+border:none;
+border-radius:30px;
+background:linear-gradient(90deg,#6a11cb,#9f44d3);
+color:white;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+margin-top:10px;
+}
+
+.login-btn:hover{
+transform:scale(1.05);
+}
