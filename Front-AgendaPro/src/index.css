@@ -150,3 +150,38 @@ font-size:14px;
 .back-btn:hover{
 text-decoration:underline;
 }
+.workspace{
+display:flex;
+height:100vh;
+}
+
+.sidebar{
+width:230px;
+background:#1e1e2f;
+color:white;
+padding:30px;
+display:flex;
+flex-direction:column;
+}
+
+.sidebar .logo{
+margin-bottom:40px;
+}
+
+.sidebar nav{
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.sidebar a{
+color:white;
+text-decoration:none;
+font-size:15px;
+}
+
+.workspace-content{
+flex:1;
+padding:40px;
+background:#f5f6fa;
+}

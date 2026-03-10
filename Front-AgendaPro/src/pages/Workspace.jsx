@@ -1,18 +1,18 @@
+import Sidebar from "../components/Sidebar";
+
 function Workspace(){
 
 return(
 
-<div style={{
-height:"100vh",
-display:"flex",
-justifyContent:"center",
-alignItems:"center",
-background:"#121212",
-color:"white",
-fontSize:"30px"
-}}>
+<div className="workspace">
 
-Bienvenido al Workspace 🚀
+<Sidebar/>
+
+<div className="workspace-content">
+
+<h1>Bienvenido al sistema</h1>
+
+</div>
 
 </div>
 
@@ -20,4 +20,4 @@ Bienvenido al Workspace 🚀
 
 }
 
-export default Workspace
+export default Workspace;
