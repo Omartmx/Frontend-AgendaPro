@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Register from "../pages/Register";
 import Workspace from "../pages/Workspace";
 import Login from "../pages/Login";
-import Workspace from "../pages/Workspace";
 import Usuarios from "../pages/Usuarios";
 import Especialistas from "../pages/Especialistas";
 import Horarios from "../pages/Horarios";
