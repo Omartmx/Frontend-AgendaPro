@@ -1,70 +1,98 @@
-*{
+body{
 margin:0;
 padding:0;
-box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
-}
-
-body{
-height:100vh;
-background:linear-gradient(135deg,#1f1f1f,#2c2c2c);
-}
-
-/* contenedor principal */
-.login-container{
-height:100vh;
+min-height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
 }
 
-/* tarjeta login */
-.login-box{
-width:380px;
-padding:45px;
-background:#2b2b2b;
-border-radius:14px;
-box-shadow:0 15px 40px rgba(0,0,0,0.5);
+.login-page{
+height:100vh;
+width:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#141414,#1f1f1f);
+}
+
+/* contenedor principal */
+.login-wrapper{
+width:900px;
+max-width:95%;
+display:flex;
+justify-content:center;
+align-items:center;
+margin:auto;
+background:#1f1f1f;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 25px 60px rgba(0,0,0,0.6);
+}
+
+/* lado izquierdo */
+.login-image{
+flex:1;
+background:linear-gradient(135deg,#6a11cb,#9f44d3);
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+color:white;
+padding:40px;
 text-align:center;
 }
 
-/* titulo */
-.login-box h2{
-color:white;
-letter-spacing:3px;
-margin-bottom:30px;
+.login-image img{
+width:150px;
+margin-bottom:20px;
 }
 
-/* grupo inputs */
+.login-image h2{
+margin-bottom:10px;
+}
+
+/* lado derecho */
+.login-card{
+flex:1;
+padding:50px;
+background:#2b2b2b;
+text-align:center;
+}
+
+.login-card h2{
+color:white;
+margin-bottom:30px;
+letter-spacing:3px;
+}
+
+/* inputs */
 .input-group{
 display:flex;
 align-items:center;
 background:#3a3a3a;
-border-radius:8px;
-padding:12px;
+padding:14px;
+border-radius:10px;
 margin-bottom:20px;
 }
 
-/* iconos */
 .input-group svg{
 color:#aaa;
 margin-right:10px;
 }
 
-/* inputs */
 .input-group input{
 border:none;
 background:transparent;
 color:white;
 width:100%;
 outline:none;
-font-size:14px;
 }
 
 /* boton */
 .login-btn{
 width:100%;
-padding:14px;
+padding:15px;
 border:none;
 border-radius:30px;
 background:linear-gradient(90deg,#6a11cb,#9f44d3);
@@ -72,9 +100,20 @@ color:white;
 font-size:16px;
 cursor:pointer;
 transition:0.3s;
-margin-top:10px;
 }
 
 .login-btn:hover{
 transform:scale(1.05);
+}
+
+/* register */
+.login-register{
+margin-top:20px;
+color:#aaa;
+}
+
+.login-register a{
+color:#9f44d3;
+text-decoration:none;
+margin-left:5px;
 }

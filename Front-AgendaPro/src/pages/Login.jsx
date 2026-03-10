@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaUser, FaLock } from "react-icons/fa";
 import { login } from "../services/authService";
+import { Link } from "react-router-dom";
 import "../styles/login.css";
 
 function Login() {
@@ -16,53 +17,79 @@ function Login() {
 
             const response = await login(email, password);
 
-            console.log(response);
-
             localStorage.setItem("token", response.token);
 
             alert("Login correcto");
 
-        } catch (error) {
+        } catch {
 
             alert("Usuario o contraseña incorrectos");
 
         }
 
-    }
+    };
 
     return (
 
-        <div className="login-container">
+        <div className="login-page">
 
-            <div className="login-box">
+            <div className="login-wrapper">
 
-                <h2>LOGIN</h2>
+                {/* lado izquierdo */}
+                <div className="login-image">
 
-                <form onSubmit={handleSubmit}>
+                    <img src="https://cdn-icons-png.flaticon.com/512/3774/3774299.png" />
 
-                    <div className="input-group">
-                        <FaUser />
-                        <input
-                            type="email"
-                            placeholder="Usuario"
-                            onChange={(e) => setEmail(e.target.value)}
-                        />
-                    </div>
+                    <h2>Agenda Médica</h2>
 
-                    <div className="input-group">
-                        <FaLock />
-                        <input
-                            type="password"
-                            placeholder="Contraseña"
-                            onChange={(e) => setPassword(e.target.value)}
-                        />
-                    </div>
+                    <p>Sistema de gestión de citas médicas</p>
 
-                    <button className="login-btn">
-                        Iniciar sesión
-                    </button>
+                </div>
 
-                </form>
+                {/* lado derecho */}
+                <div className="login-card">
+
+                    <h2>LOGIN</h2>
+
+                    <form onSubmit={handleSubmit}>
+
+                        <div className="input-group">
+                            <FaUser />
+                            <input
+                                type="email"
+                                placeholder="Correo"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                            />
+                        </div>
+
+                        <div className="input-group">
+                            <FaLock />
+                            <input
+                                type="password"
+                                placeholder="Contraseña"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                            />
+                        </div>
+
+                        <button className="login-btn">
+                            Iniciar sesión
+                        </button>
+
+                        <p className="login-register">
+
+                            ¿No tienes cuenta?
+
+                            <Link to="/register">
+                                Registrarse
+                            </Link>
+
+                        </p>
+
+                    </form>
+
+                </div>
 
             </div>
 
@@ -72,4 +99,4 @@ function Login() {
 
 }
 
-export default Login
+export default Login;
